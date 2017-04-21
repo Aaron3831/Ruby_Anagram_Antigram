@@ -37,6 +37,6 @@ class String
 #     #      else
 #     #        "This is NOT an Anagram"
 #   #   end
-end
+    end
   end
 end
