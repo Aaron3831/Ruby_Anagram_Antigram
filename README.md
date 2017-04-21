@@ -18,11 +18,13 @@ A Palindrome is a word that is spelled the same when reversed.
 
 
 ## Specs (include project specs below)
-* _spec 1: Program will take user's input and convert into change_
-* _spec 2: Program will tell cashier the amount of quarters first_
-* _spec 3: Program will tell cashier the amount of dimes second._
-* _spec 4: Program will tell cashier the amount of nickels third_
-* _spec 5: Program will tell cashier the amount of pennies fourth_
+* _spec 1: Program will take user's input of two words and check if they are an anagram_
+* _spec 2: Program will account for words with upper and lower casing_
+* _spec 3: Program will check if word input is also a palindrome_
+* _spec 4: Program will determine if an input is a word (must contain a, e, i, o, u or y)_
+* _spec 5: Program will check if words are antigrams (a word is an antigram of another word if no letter match)_
+* _spec 6: Program will account for multiple words_
+* _spec 7: Program will have working Sinatra code_
 ## Known Bugs
 
 _No known bugs,_
@@ -40,6 +42,6 @@ _no support_
 
 ### License
 
-*This project is licensed under the MIT license*
+*This project is licensed under*
 
-Copyright (c) 2017 **_Zach Beecher & Aaron Nguyen_**
+Copyright (c) 2017 **_ZAaron Nguyen_**
