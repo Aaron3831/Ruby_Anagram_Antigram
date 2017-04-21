@@ -9,30 +9,31 @@ class String
     string3 = string2[0]
     string4 = string2[1]
 
-    firstreverse = string3.reverse
-    secondreverse = string4.reverse
-
     a = string3.downcase
     b = string4.downcase
 
+    firstreverse = a.reverse
+    secondreverse = b.reverse
 
-    if a.size == b.size && a.delete(b).empty?
-      output = "This is an Anagram"
-
-    elsif string3 == firstreverse
-      output = "First input is a Palindrome"
-
-    elsif string4 == secondreverse
-      output = "Second input is a Palindrome"
-
+    if string1.scan(/[aeiouy]/).count >= 1
+      "This string contains a word"
     else
-      "This is NOT an Anagram"
-    #anagram stuff#
+       "You need to input real words"
+    end
+      if a.size == b.size && a.delete(b).empty?
+         output = "This is an Anagram"
 
+      elsif a == firstreverse
+           output = "First input is a Palindrome"
 
+      elsif b == secondreverse
+          output = "Second input is a Palindrome"
 
+      elsif string1.scan(/[aeiouy]/).count >= 1
+            "This string contains a word"
 
-    #compares length of input a to b after deleting all items from b that are contained in a. empty? confirms if the array is empty afterwards#
-  end
+      else
+        "This is NOT an Anagram"
+      end
   end
 end
