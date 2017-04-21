@@ -15,25 +15,28 @@ class String
     firstreverse = a.reverse
     secondreverse = b.reverse
 
-    if string1.scan(/[aeiouy]/).count >= 1
-      "This string contains a word"
-    else
-       "You need to input real words"
-    end
-      if a.size == b.size && a.delete(b).empty?
-         output = "This is an Anagram"
+    if a.size == b.size && a.delete(b).empty?
+      "This is an Anagram"
+    elsif a == firstreverse
+      "First input is a Palindrome"
+    elsif b == secondreverse
+      "Second input is a Palindrome"
+    # elsif string1.scan(/[aeiouy]/).count >= 1
+    #     "This string contains a word"
+    elsif string1.scan(/[aeiouy]/).count < 1
+        "You need to input real words"
+    else  a.chars.sort != b.chars.sort
+          "This is an antigram"
 
-      elsif a == firstreverse
-           output = "First input is a Palindrome"
 
-      elsif b == secondreverse
-          output = "Second input is a Palindrome"
+#     elsif a == firstreverse
+#         "First input is a Palindrome"
+#     elsif b == secondreverse
+#         "Second input is a Palindrome"
 
-      elsif string1.scan(/[aeiouy]/).count >= 1
-            "This string contains a word"
-
-      else
-        "This is NOT an Anagram"
-      end
+#     #      else
+#     #        "This is NOT an Anagram"
+#   #   end
+end
   end
 end
