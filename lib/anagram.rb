@@ -1,42 +1,34 @@
 class String
-  define_method(:anagram) do
+  define_method(:anagram) do |input2|
 
-    anagram = self.to_str.split(' ')
+    answer_array = []
 
-    string1 = [anagram] * " "
-
-    string2 = string1.split(" ")
-    string3 = string2[0]
-    string4 = string2[1]
-
-    a = string3.downcase
-    b = string4.downcase
+    a = self.downcase
+    b = input2.downcase
 
     firstreverse = a.reverse
     secondreverse = b.reverse
 
+    if a.scan(/[aeiouy]/).count < 1
+      answer_array.push("At least one of these words aren't real")
+    end
+    if  a.chars.sort != b.chars.sort
+      answer_array.push("This is an antigram")
+    end
+    if a == firstreverse
+      answer_array.push("First input is a Palindrome")
+    end
+    if b == secondreverse
+      answer_array.push("Second input is a Palindrome")
+    end
     if a.size == b.size && a.delete(b).empty?
-      return  "This is an Anagram"
+      answer_array.push("This is an Anagram")
     elsif a == firstreverse
-      return  "First input is a Palindrome"
+      answer_array.push("First input is a Palindrome")
     elsif b == secondreverse
-      return  "Second input is a Palindrome"
-    # elsif string1.scan(/[aeiouy]/).count >= 1
-    #     "This string contains a word"
-    elsif string1.scan(/[aeiouy]/).count < 1
-      return "You need to input real words"
-    else  a.chars.sort != b.chars.sort
-      return  "This is an antigram"
-
-
-#     elsif a == firstreverse
-#         "First input is a Palindrome"
-#     elsif b == secondreverse
-#         "Second input is a Palindrome"
-
-#     #      else
-#     #        "This is NOT an Anagram"
-#   #   end
+      answer_array.push("Second input is a Palindrome")
+    else
+      answer_array.push("Not an anagram")
     end
   end
 end

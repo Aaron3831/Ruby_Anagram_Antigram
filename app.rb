@@ -8,6 +8,8 @@ get('/') do
 end
 
 get('/anagram') do
-  @anagram = params.fetch("anagram").anagram()
+  @anagram1 = params.fetch("anagram1")
+  @anagram2 = params.fetch("anagram2")
+  @returns = @anagram1.anagram(@anagram2)
   erb(:anagram)
 end
